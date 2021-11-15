@@ -1,6 +1,6 @@
 <script>
-  import SideNavCollapse from "../SideNavCollapse.svelte";
-  import SideNavItems from "../SideNavItems.svelte";
+  import SideNavCollapse from "./SideNavCollapse.svelte";
+  import SideNavItems from "./SideNavItems.svelte";
 
 </script>
 
