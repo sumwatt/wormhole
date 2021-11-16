@@ -1,10 +1,18 @@
 <script>
   import Brand from "./Brand.svelte";
+  import {link} from 'svelte-spa-router'
+  import {location} from 'svelte-spa-router'
+
+ 
+  console.log($location);
+
+
 </script>
+
 <ul class="nav flex-column pt-3 pt-md-0">
   <Brand />  
-  <li class="nav-item  active ">
-    <a href="{'#'}" class="nav-link">
+  <li class="nav-item {$location === '/' ? 'selected' : ''}">
+    <a href="/" class="nav-link">
       <span class="sidebar-icon">
         <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
@@ -14,8 +22,8 @@
       <span class="sidebar-text">Dashboard</span>
     </a>
   </li>
-  <li class="nav-item ">
-    <a href="{'#'}" class="nav-link">
+  <li class="nav-item {$location === 'transactions' ? 'selected' : ''}">
+    <a href="/transactions" class="nav-link" use:link>
       <span class="sidebar-icon">
         <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"></path>
@@ -26,8 +34,8 @@
     </a>
   </li>
   <li role="separator" class="dropdown-divider mt-4 mb-3 border-gray-700"></li>
-  <li class="nav-item">
-    <a href="{'#'}" target="_blank" class="nav-link d-flex justify-content-between">
+  <li class="nav-item {$location === 'wallets' ? 'selected' : ''}">
+    <a href="/wallets" target="_blank" class="nav-link d-flex justify-content-between" use:link>
       <span>
         <span class="sidebar-icon">
           <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
