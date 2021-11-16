@@ -2,7 +2,6 @@
 
 </script>
 
-
 <button type="button" class="btn btn-block btn-gray-800 mb-3" data-bs-toggle="modal" data-bs-target="#modal-form">New Keys</button>
 <!-- Modal Content -->
 <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
@@ -14,7 +13,7 @@
                   <div class="text-center text-md-center mb-4 mt-md-0">
                       <h1 class="mb-0 h4">Create A Keypair</h1>
                   </div>
-                  <form action="{'#'}" class="mt-4">
+                  <form action="/#/wallets" class="mt-4">
                       <!-- Form -->
                       <div class="form-group mb-4">
                           <label for="email">Keypair Name</label>
